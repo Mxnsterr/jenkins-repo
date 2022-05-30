@@ -14,7 +14,7 @@ spec:
       containers:
       - name: auth
         imagePullPolicy: IfNotPresent
-        image: docker.io/106734/authapi:latest
+        image: 106734/authapi:latest
         ports:
           - containerPort: 3000
             name: http-web-svc
@@ -31,4 +31,4 @@ spec:
   - name: auth
     protocol: TCP
     port: 3000
-    targetPort: http-web-svc
+    targetPort: 3000

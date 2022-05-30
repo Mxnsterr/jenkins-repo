@@ -13,7 +13,6 @@ spec:
     spec:
       containers:
       - name: chat
-        imagePullPolicy: IfNotPresent
         image: docker.io/106734/chatapi:latest
         ports:
           - containerPort: 80

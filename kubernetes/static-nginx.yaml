@@ -13,7 +13,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        imagePullPolicy: IfNotPresent
         image: docker.io/106734/frontend:latest
         ports:
           - containerPort: 80

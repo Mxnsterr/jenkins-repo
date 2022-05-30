@@ -13,7 +13,6 @@ spec:
     spec:
       containers:
       - name: auth
-        imagePullPolicy: IfNotPresent
         image: docker.io/106734/authapi:latest
         ports:
           - containerPort: 80

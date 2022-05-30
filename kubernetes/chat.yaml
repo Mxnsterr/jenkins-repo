@@ -14,10 +14,9 @@ spec:
       containers:
       - name: chat
         imagePullPolicy: IfNotPresent
-        image: chat:latest
+        image: docker.io/106734/chatapi:latest
         ports:
           - containerPort: 80
-            name: http-web-svc
         
 ---
 
@@ -29,7 +28,7 @@ spec:
   selector:
     app: chat
   ports:
-  - name: chat
+  - name: static
     protocol: TCP
     port: 80
-    targetPort: http-web-svc
+    targetPort: 80

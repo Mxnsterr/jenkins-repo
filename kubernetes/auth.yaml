@@ -14,10 +14,9 @@ spec:
       containers:
       - name: auth
         imagePullPolicy: IfNotPresent
-        image: auth:latest
+        image: docker.io/106734/authapi:latest
         ports:
           - containerPort: 80
-            name: http-web-svc
         
 ---
 
@@ -29,7 +28,7 @@ spec:
   selector:
     app: auth
   ports:
-  - name: auth
+  - name: static
     protocol: TCP
     port: 80
-    targetPort: http-web-svc
+    targetPort: 80
